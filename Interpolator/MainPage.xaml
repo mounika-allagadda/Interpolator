@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Interpolator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <!--Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" /-->
+
+            <Label
+                Text="VEMPALLI UGD"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="20"
+                FontAttributes="Bold"
+                HorizontalOptions="Center" />
+
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <VerticalStackLayout
+                    Spacing="5"
+                    Padding="20,0"
+                    VerticalOptions="Center">
+                    <Label
+                    Text="RL-A"
+                    FontSize="15"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Entry x:Name="RLA"
+                        Placeholder="                 "
+                        IsEnabled="True"
+                        BackgroundColor="SkyBlue" 
+                        Keyboard="Numeric"
+                        TextChanged="clearRlc"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Spacing="5"
+                    Padding="20,0"
+                    VerticalOptions="Center">
+                    <Label
+                    Text="L"
+                    FontSize="15"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Entry x:Name="L"
+                        Placeholder="                 "
+                        IsEnabled="True"
+                        BackgroundColor="SkyBlue"
+                        Keyboard="Numeric"
+                        TextChanged="clearRlc"/>
+                </VerticalStackLayout>
+                
+                <VerticalStackLayout
+                    Spacing="5"
+                    Padding="20,0"
+                    VerticalOptions="Center">
+                    <Label
+                    Text="RL-B"
+                    FontSize="15"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Entry x:Name="RLB"
+                        Placeholder="                 "
+                        IsEnabled="True"
+                        BackgroundColor="SkyBlue"
+                        Keyboard="Numeric"
+                        TextChanged="clearRlc"/>
+                </VerticalStackLayout>
+
+                
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center">
+                <VerticalStackLayout
+                    Spacing="5"
+                    Padding="20,0"
+                    VerticalOptions="Center">
+                    <Label
+                    Text="x"
+                    FontSize="15"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Entry x:Name="X"
+                        Placeholder="                 "
+                        IsEnabled="True"
+                        BackgroundColor="SkyBlue"
+                        Keyboard="Numeric"
+                        TextChanged="clearRlc"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout
+                    Spacing="5"
+                    Padding="20,0"
+                    VerticalOptions="Center">
+                    <Label
+                    Text="RL-C"
+                    FontSize="15"
+                        HorizontalTextAlignment="Center"/>
+
+                    <Entry x:Name="RLC"
+                        Placeholder="                 "
+                        IsEnabled="False"
+                        IsReadOnly="True"
+                        BackgroundColor="LightGray"/>
+                </VerticalStackLayout>
+
+            </HorizontalStackLayout>
+
+            <Button
+                x:Name="InterpolateBtn"
+                Text="Calculate"
+                SemanticProperties.Hint="Calculates interpolation"
+                Clicked="OnInterpolateClicked"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
